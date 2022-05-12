@@ -7,9 +7,17 @@
  * функция должна вернуть false.
  * 
 */
-
+/* jshint esversion: 6 */ 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+// Напишите код здесь
+  for(j=0; j < arr.length; j++){
+    for(i=1; i < arr.length; i++){
+      if (arr[j] + arr[i] === sum){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

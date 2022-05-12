@@ -8,8 +8,15 @@
  * 
 */
 
+/* jshint esversion:6 */ 
 function anagram(str1, str2) {
-    // Напишите код здесь
+  // Напишите код здесь
+  const result = (str1.length === str2.length) && Array.from(str1.toLowerCase()).some((el, index) => {
+        
+        return (str2.toLowerCase()).includes(el) && (el !== str2[index].toLowerCase());
+  });
+    
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

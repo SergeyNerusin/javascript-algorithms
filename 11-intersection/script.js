@@ -6,9 +6,15 @@
  * массив чисел, содержащихся в обоих исходных массивах.
  * 
 */
-
+/* jshint esversion: 6 */ 
 function intersection(arr1, arr2) {
     // Напишите код здесь
+    const num = arr1.filter((el) => {return arr2.includes(el);});
+    
+    const result = num.filter((item, index, array) => {
+          return array.lastIndexOf(item) === index;});
+    
+ return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -13,12 +13,16 @@
  * 
 */
 
-function palindrome(str) {
-    // Напишите код здесь
+/* jshint esversion: 6*/ 
+function palindrome(str){
+  let newStr = str.replaceAll('!','').replaceAll(' ','').replaceAll(',','').toLowerCase();
+  result = newStr.split('').reverse().join('');
+  result = (newStr === result) ? true : false;
+  return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
+console.log(palindrome('О, лета тело!')); // true
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false

@@ -9,8 +9,18 @@
  *
 */
 
+/*jshint esversion: 6*/ 
 function findVowels(str) {
-    // Напишите код здесь
+  // Напишите код здесь
+   const sample = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'].join('');
+   const result = Array.from(str.toLowerCase()).reduce((count, el) => {
+      if (sample.includes(el)) { 
+             count += 1; 
+        }
+        return count;
+    },0);
+    
+  return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -5,10 +5,27 @@
  * Функция должна возвращать массив простых чисел от 2 до n.
  * 
 */
-
+/* jshint esversion: 6 */ 
 function primes(num) {
     // Напишите код здесь
+  function isPrime(number) {
+    for (let i = 2; i < number; i++) {
+      if((number % i) === 0) {
+       return false;} 
+     }
+   return true;
+  }
+
+  const simpleNumber=[];
+  for (let i=2; i <= num; i++) {
+    if(isPrime(i) === true) {
+      simpleNumber.push(i);
+    }
+  }
+
+  return simpleNumber; 
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

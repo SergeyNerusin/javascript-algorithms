@@ -8,8 +8,14 @@
  * последовательности Фибоначчи.
 */
 
+/* jshint esversion: 6 */ 
 function fibonacci(n) {
-    // Напишите код здесь
+  // Напишите код здесь
+    let fiboNum =[0, 1];
+    for (let i=2; i < n; i++) {
+    fiboNum[i] = fiboNum[i-2] + fiboNum[i-1];
+  }
+ return fiboNum[n-1];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

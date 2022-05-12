@@ -6,9 +6,13 @@
  * в переданном массиве. То есть, дубликаты должны быть удалены.
  * 
 */
-
+/* jshint esversion: 6 */ 
 function uniq(arr) {
     // Напишите код здесь
+  const num = arr.filter((item, index, array) => {
+        return array.lastIndexOf(item) === index;});
+
+  return num;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

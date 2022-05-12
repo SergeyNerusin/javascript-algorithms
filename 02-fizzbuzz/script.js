@@ -10,10 +10,20 @@
  * 
 */
 
+/* jshint esversion: 6 */ 
 function fizzBuzz(num) {
     // Напишите код здесь
+    if(((num % 3) === 0) && ((num % 5) === 0)){
+        return 'fizzbuzz';
+    } else if ((num % 3) === 0){
+        return 'fizz';
+    } else if ((num % 5)=== 0){
+        return 'buzz';
+    }
+  return num;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
-console.log(fizzBuzz(15));
+for(let i=1; i <= 35; i++){
+    console.log(`${i}: ${fizzBuzz(i)}`);
+}
